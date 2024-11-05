@@ -73,10 +73,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
    */
   [_LOWER] = LAYOUT(
       _______, _______, _______, _______, _______, _______,                   _______, _______, _______, _______, _______, _______,
-      KC_TILD, KC_EXLM, KC_AT,   KC_HASH, KC_DLR,  KC_PERC,                   KC_CIRC, KC_AMPR, KC_ASTR, KC_LPRN, KC_RPRN, _______,
-      _______, KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,                     KC_F6,   KC_UNDS, KC_PLUS, KC_LCBR, KC_RCBR, KC_PIPE,
-      KC_CAPS, KC_F7,   KC_F8,   KC_F9,   KC_F10,  KC_F11,  KC_LPRN, KC_RPRN, KC_F12,  _______, _______, KC_HOME, KC_END,  _______,
-      _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, KC_MNXT, KC_VOLD, KC_VOLU, KC_MPLY
+      _______, KC_EXLM, KC_AT,   KC_HASH, KC_DLR,  KC_PERC,                   KC_CIRC, KC_AMPR, KC_ASTR, KC_LPRN, KC_RPRN, _______,
+      _______, _______, _______, _______, _______, _______,                   _______, _______, _______, _______, _______, _______,
+      _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______,
+      _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______
       ),
 
   /* Raise
@@ -95,9 +95,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [_RAISE] = LAYOUT(
       KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,   KC_F6,                     KC_F7,   KC_F8,   KC_F9,   KC_F10,  KC_F11,  KC_F12,
       KC_CALC, _______, _______, _______, _______, _______,                   _______, _______, _______, _______, _______, KC_DEL,
-      _______, _______, _______, _______, _______, KC_LPAD,                   KC_MENU, _______, _______, _______, _______, ADJUST,
-      KC_CAPS, KC_HOME, KC_PCMM, KC_PDOT, KC_WHOM, KC_CPNL, KC_EQL,  KC_UNDS, KC_MUTE, KC_MPRV, KC_MFFD, KC_MSTP, KC_END,  KC_INS,
-      KC_APP,  KC_WBAK, KC_WFWD, KC_WREF, KC_PLUS, CARET,   KC_PGDN, KC_PGUP, GRAVE,   KC_EXLM, KC_MNXT, KC_VOLD, KC_VOLU, KC_MPLY
+      _______, _______, _______, _______, _______, _______,                   _______, _______, _______, _______, _______, ADJUST,
+      KC_CAPS, KC_HOME, KC_PCMM, _______, _______, _______, KC_EQL,  KC_UNDS, _______, _______, KC_MPRV, KC_MFFD, KC_END,  KC_MSTP,
+      KC_APP,  KC_WBAK, KC_WFWD, KC_WREF, KC_INS,  KC_PLUS, KC_PGDN, KC_PGUP, KC_EXLM, KC_MUTE, KC_MNXT, KC_VOLD, KC_VOLU, KC_MPLY
       ),
 
   /* Adjust (Lower + Raise)
@@ -116,7 +116,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [_ADJUST] =  LAYOUT(
       KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,   KC_F6,                     KC_F7,   KC_F8,   KC_F9,   KC_F10,  KC_F11,  KC_F12,
       _______, _______, _______, _______, _______, AG_NORM,                   KC_RSFT, UG_TOGG, UG_HUEU, UG_SATU, UG_VALU, KC_DEL,
-      ADJUST,  _______, _______, _______, _______, _______,                   _______, UG_NEXT, UG_HUED, UG_SATD, UG_VALD, _______,
+      _______, _______, _______, _______, _______, _______,                   _______, UG_NEXT, UG_HUED, UG_SATD, UG_VALD, _______,
       _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______,
       _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______
       )
@@ -182,12 +182,6 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     case CARET:
       if (record->event.pressed) {
         tap_code16(RALT(KC_QUOT));
-      }
-      return false;
-      break;
-    case GRAVE:
-      if (record->event.pressed) {
-        tap_code16(RALT(KC_BSLS));
       }
       return false;
       break;
