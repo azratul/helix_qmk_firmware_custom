@@ -58,6 +58,13 @@ My Custom Helix Keyboard Layout
 ![Live Share Preview](https://raw.githubusercontent.com/azratul/azratul/511051744799ebacea2a74a19bfd91d8ec413003/unnerv.png)
 
 
+## Commands
+
+```
+qmk compile -kb helix/rev3_5rows -km custom
+qmk flash -kb helix/rev3_5rows -km custom
+```
+
 ## Helix
 
 A compact split ortholinear keyboard.
