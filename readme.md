@@ -5,6 +5,11 @@ My Custom Helix Keyboard Layout
 
 ## Layout
 
+Home row mods: `A` Alt, `S` Shift, `F` GUI, `J` GUI, `L` Shift, `Ñ` AltGr.
+Hold `D` for Raise, hold `K` for Lower.
+
+`Layer` key: tap = Raise (locked), hold 1s = Lower (locked), tap again = back to Qwerty.
+
 ### Qwerty Layer (Base)
 ```
 ,-----------------------------------------.             ,-----------------------------------------.
@@ -12,13 +17,27 @@ My Custom Helix Keyboard Layout
 |------+------+------+------+------+------|             |------+------+------+------+------+------|
 | Tab  |   Q  |   W  |   E  |   R  |   T  |             |   Y  |   U  |   I  |   O  |   P  | Bksp |
 |------+------+------+------+------+------|             |------+------+------+------+------+------|
-|Raise |   A  |   S  |   D  |   F  |   G  |             |   H  |   J  |   K  |   L  |   Ñ  |Enter |
+|  °   |   A  |   S  |   D  |   F  |   G  |             |   H  |   J  |   K  |   L  |   Ñ  |Enter |
 |------+------+------+------+------+------+------+------+------+------+------+------+------+------|
-| Shift|   <  |   Z  |   X  |   C  |   V  |   `  |   +  |   B  |   N  |   M  |   ,  |   .  |   -  |
+| CAPS |   <  |   Z  |   X  |   C  |   V  |   `  |   +  |   B  |   N  |   M  |   ,  |   .  |   -  |
 |------+------+------+------+------+------+------+------+------+------+------+------+------+------|
-| Ctrl | GUI  | Alt  | Print|   ¿  |   '  |   ´  |Space |AltGr |   ?  | Left | Down |  Up  |Right |
+| Ctrl |Adjust|Layer | Print|   ¿  |   '  |   ´  |Space | Ins  |  _ ! | Left | Down |  Up  |Right |
 `-------------------------------------------------------------------------------------------------'
+```
 
+### Lower Layer (numpad)
+```
+,-----------------------------------------.             ,-----------------------------------------.
+|  F1  |  F2  |  F3  |  F4  |  F5  |  F6  |             |  F7  |  F8  |  F9  |  F10 |  F11 |  F12 |
+|------+------+------+------+------+------|             |------+------+------+------+------+------|
+|      | KP 7 | KP 8 | KP 9 | KP / |      |             |      |      |      |      |      | Del  |
+|------+------+------+------+------+------|             |------+------+------+------+------+------|
+|      | KP 4 | KP 5 | KP 6 | KP * |      |             |      |      |      |      |      |      |
+|------+------+------+------+------+------+------+------+------+------+------+------+------+------|
+|      | KP 1 | KP 2 | KP 3 | KP - |      |      |      |      |      |      |      |      |      |
+|------+------+------+------+------+------+------+------+------+------+------+------+------+------|
+|      | KP 0 |Layer | KP . | KP + | NumLk| Back | Fwd  |      |   !  | Home | PgDn | PgUp | End  |
+`-------------------------------------------------------------------------------------------------'
 ```
 
 ### Raise Layer
@@ -26,15 +45,14 @@ My Custom Helix Keyboard Layout
 ,-----------------------------------------.             ,-----------------------------------------.
 |  F1  |  F2  |  F3  |  F4  |  F5  |  F6  |             |  F7  |  F8  |  F9  |  F10 |  F11 |  F12 |
 |------+------+------+------+------+------|             |------+------+------+------+------+------|
-| Calc |      |      |      |      |      |             |      |      |      |      |      | Del  |
+|      |      |      |      |      |      |             |      |      |      |      |      | Del  |
 |------+------+------+------+------+------|             |------+------+------+------+------+------|
-|      |      |      |      |      |      |             |      |      |      |      |      |Adjust|
+|      |      |      |      |      |      |             |      | Left | Down |  Up  |Right |      |
 |------+------+------+------+------+------+------+------+------+------+------+------+------+------|
-| CAPS | Home |  .   |      |      |      | Ins  | Mute |      |      | MPrv | MFwd | End  |MStop |
+|      |      |      |      |      |      |      |      |      |      |      |      |      |      |
 |------+------+------+------+------+------+------+------+------+------+------+------+------+------|
-| Menu | Back |  Fwd |Rfresh|   ¡  |   °  | PgDn | PgUp |      |   !  | Next | Vol- | Vol+ | Play |
+|      |      |      |      |   ¡  |      | Back | Fwd  |      |   !  | Home | PgDn | PgUp | End  |
 `-------------------------------------------------------------------------------------------------'
-
 ```
 
 ### Adjust Layer (Lower + Raise)
@@ -42,15 +60,23 @@ My Custom Helix Keyboard Layout
 ,-----------------------------------------.             ,-----------------------------------------.
 |  F1  |  F2  |  F3  |  F4  |  F5  |  F6  |             |  F7  |  F8  |  F9  |  F10 |  F11 |  F12 |
 |------+------+------+------+------+------|             |------+------+------+------+------+------|
-|      | Reset|RGBRST|EEPRST|      |      |             |      |      |      |      |      |  Del |
+|      | Reset|RGBRST|EEPRST|      |      |             |      |RGB ON| HUE+ | SAT+ | VAL+ |  Del |
 |------+------+------+------+------+------|             |------+------+------+------+------+------|
-|      |      |      |      |      | Mac  |             | Win  |      |      |      |      |      |
+|      |      |      |      |      | Mac  |             | Win  | MODE | HUE- | SAT- | VAL- |      |
 |------+------+------+------+------+------+------+------+------+------+------+------+------+------|
-|      |      |      |      |      |      |      |      |      |      |RGB ON| HUE+ | SAT+ | VAL+ |
+|      |      |      |      |      |      |      |      |      |      |      |      |      |      |
 |------+------+------+------+------+------+------+------+------+------+------+------+------+------|
-|      |      |      |      |      |      |      |      |      |      | MODE | HUE- | SAT- | VAL- |
+|      |      |      |      |      |      |      |      |      |      |      |      |      |      |
 `-------------------------------------------------------------------------------------------------'
 ```
+
+### Encoders
+| Layer  | Left              | Right             |
+|--------|-------------------|-------------------|
+| Qwerty | Mouse wheel       | Volume            |
+| Lower  | PgUp / PgDn       | Home / End        |
+| Raise  | RGB brightness    | RGB speed         |
+| Adjust | RGB mode          | Right / Left      |
 
 ## OLED Screen
 
@@ -60,9 +86,11 @@ My Custom Helix Keyboard Layout
 
 ## Commands
 
+Keymap: `rev3/keymaps/custom` (`rev3_5rows` was merged into `rev3` upstream).
+
 ```
-qmk compile -kb helix/rev3_5rows -km custom
-qmk flash -kb helix/rev3_5rows -km custom
+qmk compile -kb helix/rev3 -km custom
+qmk flash -kb helix/rev3 -km custom
 ```
 
 ## Helix
@@ -70,11 +98,7 @@ qmk flash -kb helix/rev3_5rows -km custom
 A compact split ortholinear keyboard.
 
 Keyboard Maintainer: [Makoto Kurauchi](https://github.com/MakotoKurauchi/) [@pluis9](https://twitter.com/pluis9) [yushakobo](https://github.com/yushakobo)
-Hardware Supported: Helix PCB Alpha, Beta, Rev3, Pro Micro  
+Hardware Supported: Helix Pico, Beta, Rev3, Pro Micro  
 Hardware Availability: [PCB & Case Data](https://github.com/MakotoKurauchi/helix), [Yushakobo Shop](https://yushakobo.jp/shop/), [Little Keyboards](https://littlekeyboards.com/collections/helix)
-
-## How to build
- * [Helix how to Customize and Compile](rev2/keymaps/default/readme.md#customize)
- * [HelixPico how to Customize and Compile](pico/keymaps/default/readme.md#customize)
 
 See [build environment setup](https://docs.qmk.fm/#/getting_started_build_tools) then the [make instructions](https://docs.qmk.fm/#/getting_started_make_guide) for more information.
